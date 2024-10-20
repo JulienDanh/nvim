@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "cyberdream" } },
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     -- dap
