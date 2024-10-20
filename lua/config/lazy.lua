@@ -24,7 +24,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.dap.core" },
     -- editor
     { import = "lazyvim.plugins.extras.editor.aerial" },
-    { import = "lazyvim.plugins.extras.editor.fzf" },
+    -- { import = "lazyvim.plugins.extras.editor.fzf" },
     { import = "lazyvim.plugins.extras.editor.overseer" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
     -- { import = "lazyvim.plugins.extras.editor.harpoon2" },
