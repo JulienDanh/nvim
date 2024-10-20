@@ -23,6 +23,7 @@ require("lazy").setup({
     -- dap
     { import = "lazyvim.plugins.extras.dap.core" },
     -- editor
+    { import = "lazyvim.plugins.extras.ui.edgy" },
     { import = "lazyvim.plugins.extras.editor.aerial" },
     -- { import = "lazyvim.plugins.extras.editor.fzf" },
     { import = "lazyvim.plugins.extras.editor.overseer" },
