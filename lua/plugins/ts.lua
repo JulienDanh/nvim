@@ -20,26 +20,6 @@ return {
     },
   },
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      diagnostics = {
-        update_in_insert = false,
-        virtual_text = true,
-        signs = true,
-        underline = true,
-        severity_sort = true,
-        float = {
-          focusable = false,
-          style = "minimal",
-          border = "rounded",
-          source = "always",
-          header = "",
-          prefix = "",
-        },
-      },
-    },
-  },
-  {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}

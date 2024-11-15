@@ -42,7 +42,8 @@ return {
           set_keymap("n", "<leader>gI", "<cmd>TSToolsGoToSourceDefinition<CR>", opts) -- Go to source definition
         end,
         settings = {
-          tsserver_max_memory = 12288,
+          separate_diagnostic_server = false,
+          tsserver_max_memory = 4096,
           tsserver_file_preferences = {
             importModuleSpecifierPreference = "relative",
           },
