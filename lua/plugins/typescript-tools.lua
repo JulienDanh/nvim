@@ -40,10 +40,10 @@ return {
           set_keymap("n", "<leader>ru", "<cmd>TSToolsRemoveUnused<CR>", opts) -- Remove unused imports/vars
           set_keymap("n", "<leader>fa", "<cmd>TSToolsFixAll<CR>", opts) -- Fix all auto-fixable issues
           set_keymap("n", "<leader>gI", "<cmd>TSToolsGoToSourceDefinition<CR>", opts) -- Go to source definition
+          set_keymap("n", "<leader>gi", "<cmd>TSToolsAddMissingImports<CR>")
         end,
         settings = {
           separate_diagnostic_server = false,
-          tsserver_max_memory = 4096,
           tsserver_file_preferences = {
             importModuleSpecifierPreference = "relative",
           },

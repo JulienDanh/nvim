@@ -4,22 +4,6 @@ end
 return {
   { "nvim-lua/plenary.nvim" },
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      setup = {
-        eslint = function()
-          require("lazyvim.util").lsp.on_attach(function(client)
-            if client.name == "eslint" then
-              client.server_capabilities.documentformattingprovider = true
-            elseif client.name == "tsserver" then
-              client.server_capabilities.documentformattingprovider = false
-            end
-          end)
-        end,
-      },
-    },
-  },
-  {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}

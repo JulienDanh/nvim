@@ -17,8 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "cyberdream" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "industry" } },
     -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- dap
     { import = "lazyvim.plugins.extras.dap.core" },
@@ -38,7 +39,7 @@ require("lazy").setup({
     -- lang
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- linter
-    { import = "lazyvim.plugins.extras.linting.eslint" },
+    -- { import = "lazyvim.plugins.extras.linting.eslint" },
     -- lsp
     -- test
     -- ui
