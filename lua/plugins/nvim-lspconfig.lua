@@ -16,13 +16,6 @@ return {
       servers = {
         eslint = {
           enabled = true,
-          handlers = {
-            ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-              update_in_insert = false, -- disable diagnostics while typing
-              virtual_text = false, -- or enable but keep minimal
-              debounce_text_changes = 500,
-            }),
-          },
           settings = {
             codeAction = {
               disableRuleComment = {
@@ -39,18 +32,15 @@ return {
             },
             debug = true,
             format = false,
-            -- nodePath = "",
             onIgnoredFiles = "off",
-            -- packageManager = "npm",
-            -- quiet = false,
-            -- rulesCustomizations = {},
             run = "onSave",
             useESLintClass = false,
             validate = "on",
             workingDirectory = { mode = "auto" },
           },
           flags = {
-            debounce_text_changes = 500, -- Adjust the debounce time (in milliseconds) as needed
+            allow_incremental_sync = false,
+            debounce_text_changes = 2000, -- Adjust the debounce time (in milliseconds) as needed
           },
         },
       },
