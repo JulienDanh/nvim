@@ -2,6 +2,7 @@ return {
   {
     "vim-test/vim-test",
     config = function()
+      local search_regression_cmd = "npm run mocha:search-regression:single"
       -- Define the custom strategy
       function TestStrategy(cmd)
         vim.cmd("enew")
@@ -13,18 +14,17 @@ return {
       vim.g["test#strategy"] = "tab_term"
 
       -- Normal Mocha command
-      vim.g["test#javascript#mocha#executable"] = "npm run mocha:single:skipbuild "
-      vim.g["test#typescript#mocha#executable"] = "npm run mocha:single:skipbuild "
-
+      vim.g["test#javascript#mocha#executable"] = search_regression_cmd
+      vim.g["test#typescript#mocha#executable"] = search_regression_cmd
       -- Debug function
       function DebugNearest()
         -- Set the test runner to 'inspectbrk'
-        vim.g["test#javascript#mocha#executable"] = "npm run mocha:single:inspectbrk "
-        vim.g["test#typescript#mocha#executable"] = "npm run mocha:single:inspectbrk "
+        vim.g["test#javascript#mocha#executable"] = search_regression_cmd .. ":inspectbrk "
+        vim.g["test#typescript#mocha#executable"] = search_regression_cmd .. ":inspectbrk "
         vim.cmd("TestNearest")
         -- Revert to the normal Mocha command
-        vim.g["test#javascript#mocha#executable"] = "npm run mocha:single:skipbuild "
-        vim.g["test#typescript#mocha#executable"] = "npm run mocha:single:skipbuild "
+        vim.g["test#javascript#mocha#executable"] = search_regression_cmd
+        vim.g["test#typescript#mocha#executable"] = search_regression_cmd
       end
 
       -- Create DebugNearest command
