@@ -3,15 +3,7 @@ return {
     "vim-test/vim-test",
     config = function()
       local search_regression_cmd = "npm run mocha:search-regression:single"
-      -- Define the custom strategy
-      function TestStrategy(cmd)
-        vim.cmd("enew")
-        vim.cmd("terminal " .. cmd)
-      end
-
-      -- Set the custom strategy
-      vim.g["test#custom_strategies"] = { tab_term = TestStrategy }
-      vim.g["test#strategy"] = "tab_term"
+      vim.g["test#strategy"] = "neovim_sticky"
 
       -- Normal Mocha command
       vim.g["test#javascript#mocha#executable"] = search_regression_cmd
