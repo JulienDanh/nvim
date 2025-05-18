@@ -17,9 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "industry" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "github_dark_high_contrast" } },
     -- import/override with your plugins
-    { import = "lazyvim.plugins.extras.ai.copilot", opts = { copilot_model = "claude-3.7-sonnet" } },
+    -- { import = "lazyvim.plugins.extras.ai.copilot", opts = { copilot_model = "claude-3.7-sonnet" } },
     -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- dap
     { import = "lazyvim.plugins.extras.dap.core" },
@@ -29,7 +29,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.editor.fzf" },
     { import = "lazyvim.plugins.extras.editor.overseer" },
     -- { import = "lazyvim.plugins.extras.coding.neogen" },
-    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     -- { import = "lazyvim.plugins.extras.editor.harpoon2" },
     { import = "lazyvim.plugins.extras.editor.illuminate" },
     -- { import = "lazyvim.plugins.extras.editor.refactoring" },
