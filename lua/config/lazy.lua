@@ -19,7 +19,7 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "github_dark_high_contrast" } },
     -- import/override with your plugins
-    -- { import = "lazyvim.plugins.extras.ai.copilot", opts = { copilot_model = "claude-3.7-sonnet" } },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- dap
     { import = "lazyvim.plugins.extras.dap.core" },
