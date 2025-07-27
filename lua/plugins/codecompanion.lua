@@ -1,7 +1,6 @@
 return {
   {
     "olimorris/codecompanion.nvim",
-    opts = {},
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
@@ -75,6 +74,18 @@ return {
             },
           },
         },
+      },
+    },
+    keys = {
+      {
+        "<leader>at",
+        "<cmd>CodeCompanionChat<CR>",
+        desc = "Open CodeCompanion Palette",
+      },
+      {
+        "<leader>aa",
+        "<cmd>CodeCompanionActions<CR>",
+        desc = "Open CodeCompanion Actions",
       },
     },
   },
