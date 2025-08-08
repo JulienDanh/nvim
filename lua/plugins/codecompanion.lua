@@ -10,12 +10,15 @@ return {
       strategies = {
         chat = {
           adapter = "copilot",
+          model = "gemini-2.5-pro",
         },
         inline = {
           adapter = "copilot",
+          model = "gemini-2.5-pro",
         },
         cmd = {
           adapter = "copilot",
+          model = "gemini-2.5-pro",
         },
       },
       display = {
@@ -45,6 +48,18 @@ return {
         "<leader>aa",
         "<cmd>CodeCompanionActions<CR>",
         desc = "Open CodeCompanion Actions",
+      },
+    },
+  },
+  {
+    "greggh/claude-code.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- Required for git operations
+    },
+    opts = {
+      window = {
+        split_ratio = 0.4,
+        position = "vertical", -- Can be "left", "right", "top", or "bottom"
       },
     },
   },
