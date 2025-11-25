@@ -5,9 +5,7 @@ return {
       opts.ensure_installed = opts.ensure_installed or {}
       table.insert(opts.ensure_installed, "js-debug-adapter")
     end,
-    version = "^1.0.0",
   },
-  { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
   {
     "mfussenegger/nvim-dap",
     optional = true,
